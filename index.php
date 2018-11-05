@@ -6,8 +6,9 @@
 </head>
 <body>
 <form action="shorten.php" method="post">
-    <input type="text" id="number2" name="url" placeholder="Url">
+    <input type="text" id="number2" name="url" placeholder="Deine Url">
     <input type="submit" name="submit" value="URL verkürzen">
 </form>
 </body>
+
 </html>
