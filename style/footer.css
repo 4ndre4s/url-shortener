@@ -1,0 +1,26 @@
+#footer {
+    position: fixed;
+    bottom: 2.5%;
+    right: 2.5%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.footer_element {
+    background-color: lightgreen;
+    text-align: center;
+}
+
+.footer_element:hover {
+    background-color: #9beea0;
+}
+
+a {
+    text-decoration: none;
+    text-align: center;
+    font-size: 120%;
+
+}
+
+a:visited {
+    color: -moz-default-color;
+}
