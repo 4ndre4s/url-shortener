@@ -8,10 +8,9 @@
 <body>
     <?php
         define("token_length", 7);
-        //todo: use domain
         $token = file_get_contents("http://random-token.xyz/". token_length, False);
         $url = htmlspecialchars($_POST['url']);
-        $domain = "http://18.153.3.151/phpsturm/short/shorted";
+        $domain = "http://view.make-short.xyz/";
 
 
         //TODO: check, if it is a url
