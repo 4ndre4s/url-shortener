@@ -6,14 +6,14 @@
     <?php include 'style.php'?>
 </head>
 <body>
-<div class="outer_container">
-<form class="inner_container" action="shorten.php" method="post">
-    <input type="text" name="url" placeholder="http(s)://your.url">
-    <input type="submit" name="submit" value="URL verkürzen">
-</form>
-</div>
-    <?php
-        include 'footer.php';
-    ?>
-</body>
+    <div class="outer_container">
+    <form class="inner_container" action="shorten.php" method="post">
+        <input type="text" name="url" placeholder="http(s)://your.url">
+        <input type="submit" name="submit" value="make url short">
+    </form>
+    </div>
+        <?php
+            include 'footer.php';
+        ?>
+    </body>
 </html>
