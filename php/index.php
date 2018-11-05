@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>url-shortener!</title>
-    <?php include 'style.php'?>
+    <?php include 'style.php' ?>
 </head>
 <body>
     <div class="outer_container">

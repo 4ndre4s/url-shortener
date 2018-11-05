@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <?php include 'style.php'?>
+    <?php include 'style.php' ?>
 
 </head>
 <body>

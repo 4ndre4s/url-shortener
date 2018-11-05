@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <?php include 'style.php'?>
+    <?php include 'style.php' ?>
     <title>Url has been shortened</title>
 </head>
 <body>
@@ -18,9 +18,9 @@
         //create URL-Textfile
         if (filter_var($url, FILTER_VALIDATE_URL)) {
             $isUrl = true;
-            file_put_contents("./shorted/" . $token . ".txt", $url);
+            file_put_contents("../shorted/" . $token . ".txt", $url);
             //create .php-File from default.php
-            copy("default.php", "./shorted/" . $token . ".php");
+            copy("default.php", "../shorted/" . $token . ".php");
             $link = $domain . "/" . $token . ".php";
 
         } else {
