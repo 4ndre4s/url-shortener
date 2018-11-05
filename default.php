@@ -1,7 +1,8 @@
 <!doctype html>
-<html lang="de">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <?php include 'style.php'?>
 
 </head>
 <body>
@@ -12,5 +13,8 @@
         ?>
         window.location = "<?php echo $url;?>";
     </script>
+    <?php
+        include 'footer.php';
+    ?>
 </body>
 </html>

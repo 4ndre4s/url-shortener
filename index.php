@@ -2,13 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>URL-Verkürzen!</title>
+    <title>url-shortener!</title>
+    <?php include 'style.php'?>
 </head>
 <body>
-<form action="shorten.php" method="post">
-    <input type="text" id="number2" name="url" placeholder="Deine Url">
+<div class="outer_container">
+<form class="inner_container" action="shorten.php" method="post">
+    <input type="text" name="url" placeholder="http(s)://your.url">
     <input type="submit" name="submit" value="URL verkürzen">
 </form>
+</div>
+    <?php
+        include 'footer.php';
+    ?>
 </body>
-
 </html>

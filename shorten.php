@@ -1,28 +1,47 @@
 <!doctype html>
-<html lang="de">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <?php include 'style.php'?>
+    <title>Url has been shortened</title>
 </head>
 <body>
-
     <?php
-        $rand = substr(md5(microtime()),rand(0, 26),7);
+        define("token_length", 7);
+        //todo: use domain
+        $token = file_get_contents("http://18.153.3.151:2089/". token_length, False);
         $url = htmlspecialchars($_POST['url']);
         $domain = "http://18.153.3.151/phpsturm/short/shorted";
 
+
+        //TODO: check, if it is a url
         //create URL-Textfile
-        file_put_contents("./shorted/" . $rand . ".txt", $url);
+        if (filter_var($url, FILTER_VALIDATE_URL)) {
+            $isUrl = true;
+            file_put_contents("./shorted/" . $token . ".txt", $url);
+            //create .php-File from default.php
+            copy("default.php", "./shorted/" . $token . ".php");
+            $link = $domain . "/" . $token . ".php";
 
-        //create .php-File from default.php
-        copy("default.php", "./shorted/" . $rand . ".php");
+        } else {
+            $isUrl = false;
+        }
 
+        ?>
+    <div class="outer_container">
+        <div class="inner_container">
+            <?php
+                if ($isUrl) {
+                    echo "Your link is available under <a href=" . $link . ">" . $link . "</a>";
+                } else {
+                    echo "The entered text was not recognized as a url!";
+                }
+            ?>
+        </div>
+    </div>
 
-        $link = $domain . "/" . $rand . ".php";
-
-    echo "Deine URL ist nun unter <a href=" . $link . ">" . $link . "</a> erreichbar!";
+    <?php
+        include 'footer.php';
     ?>
-
-
 </body>
 </html>
