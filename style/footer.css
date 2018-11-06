@@ -22,8 +22,10 @@
 a {
     text-decoration: none;
     text-align: center;
-    font-size: 120%;
+}
 
+.footer_link {
+    font-size: 120%;
 }
 
 a:visited {
