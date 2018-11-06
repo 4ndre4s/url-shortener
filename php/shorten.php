@@ -10,7 +10,7 @@
         define("token_length", 7);
         $token = file_get_contents("http://random-token.xyz/". token_length, False);
         $url = htmlspecialchars($_POST['url']);
-        $domain = "http://view.make-short.xyz/";
+        $domain = "https://view.make-short.xyz";
 
 
         //TODO: check, if it is a url
@@ -33,7 +33,7 @@
                 if ($isUrl) {
                     echo "Your link is available under <a href=" . $link . ">" . $link . "</a>";
                 } else {
-                    echo "The entered text was not recognized as a url!";
+                    echo "The entered text seems to be no url!";
                 }
             ?>
         </div>
