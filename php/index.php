@@ -8,8 +8,8 @@
 <body>
     <div class="outer_container">
     <form class="inner_container" action="shorten.php" method="post">
-        <input type="text" name="url" placeholder="http(s)://your.url">
-        <input type="submit" name="submit" value="make url short">
+        <input id="input_url" type="text" name="url" placeholder="http(s)://your.url">
+        <!--<input id="submit_button" type="submit" name="submit" value="make url short">-->
     </form>
     </div>
         <?php

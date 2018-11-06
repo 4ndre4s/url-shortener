@@ -6,7 +6,17 @@
 .inner_container {
     border-radius: 15px;
     background-color: lightgreen;
-    display: inline-block;
-    padding: 5%;
+    display: block;
+    margin: 10%;
+    padding: 7.5%;
+    text-align: center;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#input_url {
+    padding: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    text-align: center;
+    font-size: 150%;
 }
