@@ -33,7 +33,7 @@
                 if ($isUrl) {
                     echo "Your link is available under <a href=" . $link . ">" . $link . "</a>";
                 } else {
-                    echo "The entered text seems to be no url!";
+                    echo "The entered text seems not to be an url!";
                 }
             ?>
         </div>
